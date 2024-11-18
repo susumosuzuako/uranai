@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>盧笙からの挑戦状</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>躑躅森盧笙からの挑戦状</h1>
+<div class="title-txt">
+<p>かかってこいやぁ！
+<br>↓</p>
+</div>
+<form>
+    <input type="button" value="押せ！" onClick="today()" ><br>
+    <div class="kuma-btn">
+    <span id="Luck">負けへんで！</span><br>
+    <span id="sbtn"></span>
+</div>
+</form>
+<!--Javascript-->
+<script type="text/javascript">
+function today() {
+        var ra = Math.floor(Math.random() * 5); // おみくじの目の生成
+        var msg;
+  var sbtn;
+        var imgSrc;
+        if (ra == 0) {
+           
+           
+            msg = "マカロニサラダ<pre>";
+            // 画像のパスを指定
+            imgSrc = "img/ro2.png";
+            
+        }
+        if (ra == 1) {
+            imgSrc = "img/ro3.png"; // 画像のパスを指定
+            msg = "ごめんな…はずれや…<pre>";
+           
+        }
+        if (ra == 2) {
+            imgSrc = "img/ro4.png"; // 画像のパスを指定
+            msg = "くそ…負けたわ…あたりやで<pre>";
+          
+        }
+        if (ra == 3) {
+            imgSrc = "img/ro5.png"; // 画像のパスを指定
+            msg = "YOU LOSE！はずれや！<pre>";
+            
+        }
+        if (ra == 4) {
+            msg = "たにし<pre>";
+            imgSrc = "img/tanirainbow.png";
+        }
+        if (ra == 5) {
+            msg = "ろぬ<pre>";
+            imgSrc = "img/ronu.png";
+        }
+        if (ra == 6) {
+            msg = "ろぬ<pre>";
+            imgSrc = "img/ronu.png";
+        }
+        document.getElementById("Luck").innerHTML = msg; // おみくじの目の出力
+
+        // 画像の表示
+        var img = document.createElement("img");
+        img.src = imgSrc;
+        img.alt = msg;
+        
+        document.getElementById("Luck").appendChild(img);
+        
+    }
+</script>
+<!--JavaScript-->
+</body>
+</html>
